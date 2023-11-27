@@ -1,29 +1,29 @@
-# README: Script de Busca de Voos
+# README: Flight Search Script
 
-## Descrição
-Este script Python automatiza a busca de voos usando a API do Skyscanner. Ele agenda e executa tarefas diárias de busca, coletando informações sobre itinerários e preços, e armazena os dados em um arquivo CSV.
+## Description
+This Python script automates flight searches using the Skyscanner API. It schedules and executes daily search tasks, collecting information about itineraries and prices, and stores the data in a CSV file.
 
-## Requisitos
+## Requirements
 - Python 3
-- Bibliotecas: requests, json, pandas, datetime, schedule, time, python-dotenv
-- Chave de API do Skyscanner
+- Libraries: requests, json, pandas, datetime, schedule, time, python-dotenv
+- Skyscanner API Key
 
-## Configuração
-1. Instale as dependências necessárias usando pip:
-   pip install requests pandas python-dotenv schedule
-2. Crie um arquivo .env na raiz do projeto e adicione sua chave de API do Skyscanner:
-   API_KEY='SuaChaveAPIAqui'
+## Setup
+1. Install the necessary dependencies using pip:
+   `pip install requests pandas python-dotenv schedule`
+2. Create a `.env` file in the project root and add your Skyscanner API key:
+   `API_KEY='YourApiKeyHere'`
 
-## Uso
-Para executar o script, use o comando no terminal:
-python nome_do_script.py
-O script irá agendar e executar a tarefa de busca de voos a cada hora, salvando os resultados em um arquivo CSV na pasta bases.
+## Usage
+To run the script, use the command in the terminal:
+`python script_name.py`
+The script will schedule and execute the flight search task every hour, saving the results in a CSV file in the `bases` folder.
 
-## Estrutura do Script
-- criar_pesquisa(): Realiza a requisição à API do Skyscanner para buscar voos.
-- tarefa_agendada(): Gera datas de busca, itera sobre diferentes combinações de aeroportos e executa a busca de voos.
+## Script Structure
+- `create_search()`: Makes a request to the Skyscanner API to search for flights.
+- `scheduled_task()`: Generates search dates, iterates over different airport combinations, and performs the flight search.
 
-## Notas Adicionais
-- Substitua nome_do_script.py pelo nome real do seu arquivo de script.
-- O script usa a biblioteca schedule para agendar tarefas. Ajuste a frequência conforme necessário.
-- A chave de API do Skyscanner deve ser obtida através do cadastro no portal de desenvolvedores do Skyscanner.
+## Additional Notes
+- Replace `script_name.py` with the actual name of your script file.
+- The script uses the `schedule` library to schedule tasks. Adjust the frequency as necessary.
+- The Skyscanner API key must be obtained by registering on the Skyscanner developers portal.
